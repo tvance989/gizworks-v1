@@ -2,9 +2,38 @@
 <html>
 <head>
     <title>Gizworks</title>
+    <script src='//code.jquery.com/jquery-2.1.1.min.js'></script>
 </head>
 <body>
-    <header><img src="/img/logo.png" alt="Gizworks Logo" height=100></header>
+    <script>
+        $(function(){
+
+        });
+
+        function scrollToSection(selector, time) {
+            $('html, body').animate({ scrollTop: $(selector).offset().top }, time);
+        }
+    </script>
+    <div>
+        <img src="/img/logo.png" alt="Gizworks Logo" height=100>
+        <nav>
+            <ul>
+                <li><a data-target='home' onclick='scrollToSection("#home",700)'>Home</a></li>
+                <li><a data-target='about' onclick='scrollToSection("#about",700)'>About</a></li>
+            </ul>
+        </nav>
+        <table>
+            <tr>
+                <td><a href='/'>Home</a></td>
+                <td><a href='/about'>About</a></td>
+                <td><a href='/gallery'>Gallery</a></td>
+                <td><a href='/order'>Order</a></td>
+                <td><a href='/contact'>Contact</a></td>
+            </tr>
+        </table>
+    </div>
     {{{body}}}
+    <div style='height:1000px; background:gray;'></div>
+    <div id='about'>About?</div>
 </body>
 </html>
