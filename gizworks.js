@@ -1,4 +1,5 @@
 var express = require('express');
+var gallery = require('./lib/gallery.js');
 
 var app = express();
 
@@ -18,7 +19,7 @@ app.get('/about', function(req, res){
     res.render('about');
 });
 app.get('/gallery', function(req, res){
-    res.render('gallery');
+    res.render('gallery', {gallery: gallery.getThings()});
 });
 app.get('/order', function(req, res){
     res.render('order');
