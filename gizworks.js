@@ -12,14 +12,23 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(function(req, res, next){
+    res.locals.showTests = app.get('env')!=='production' && req.query.test==='1';
+    next();
+});
+
 app.get('/', function(req, res){
     res.render('home');
 });
 app.get('/about', function(req, res){
-    res.render('about');
+    res.render('about', {
+        pageTestScript: '/qa/tests-about.js'
+    });
 });
 app.get('/gallery', function(req, res){
-    res.render('gallery', {gallery: gallery.getThings()});
+    res.render('gallery', {
+        gallery: gallery.getProjects()
+    });
 });
 app.get('/order', function(req, res){
     res.render('order');
