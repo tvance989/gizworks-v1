@@ -14,7 +14,15 @@
   },
   "devDependencies": {
     "chai": "^1.9.1",
+<<<<<<< HEAD
     "mocha": "^1.21.4",
     "zombie": "^2.0.0-alpha31"
+=======
+    "grunt": "^0.4.5",
+    "grunt-cafe-mocha": "^0.1.12",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-exec": "^0.4.6",
+    "mocha": "^1.21.4"
+>>>>>>> 67bb8caf445682b82754efd107d9e29e7174e6ec
   }
 }
