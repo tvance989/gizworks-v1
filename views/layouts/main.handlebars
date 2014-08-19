@@ -7,7 +7,7 @@
     {{/if}}
     <script src='//code.jquery.com/jquery-2.1.1.min.js'></script>
 </head>
-<body>
+<body style='background-image:url("http://images8.alphacoders.com/370/370799.jpg")'>
     <script>
         $(function(){
 
@@ -17,7 +17,7 @@
             $('html, body').animate({ scrollTop: $(selector).offset().top }, time);
         }
     </script>
-    <div>
+    <div style='background:white'>
         <img src="/img/logo.png" alt="Gizworks Logo" height=100>
         <nav>
             <ul>
@@ -35,9 +35,11 @@
             </tr>
         </table>
     </div>
-    {{{body}}}
+    <div style='background:white'>
+        {{{body}}}
+    </div>
     <div style='height:1000px; background:gray;'></div>
-    <div id='about'>About?</div>
+    <div id='about' style='background:white'>About?</div>
     {{#if showTests}}
         <div id='mocha'></div>
         <script src='/vendor/mocha.js'></script>

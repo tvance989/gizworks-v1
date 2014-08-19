@@ -1,1 +1,13 @@
 <h1>Order Form</h1>
+<form>
+    <input type='hidden' name='referrer'>
+    Name: <input type='text' id='name' name='name'><br>
+    Email: <input type='text' name='email'><br>
+    Phone: <input type='text' name='phone'><br>
+    Preferred method of communication:<br>
+    <input type='checkbox' name='communication' value='email'>Email<br>
+    <input type='checkbox' name='communication' value='text'>Text message<br>
+    <input type='checkbox' name='communication' value='phone'>Phone call<br>
+    <input type='checkbox' name='communication' value='text'>Other:&nbsp;
+        <input type='text' name='comm_other' placeholder='Please specify'>
+</form>

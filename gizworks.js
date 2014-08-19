@@ -27,7 +27,7 @@ app.get('/about', function(req, res){
 });
 app.get('/gallery', function(req, res){
     res.render('gallery', {
-        gallery: gallery.getProjects()
+        projects: gallery.getProjects()
     });
 });
 app.get('/order', function(req, res){
